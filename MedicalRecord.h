@@ -13,9 +13,7 @@ public:
 	// default constructor
 	MedicalRecord() 
 	{
-		totalBirths = 1000;
 		saveData = new Baby[totalBirths];
-		NumofB = 0;
 	}
 
 	// destructor
@@ -51,7 +49,7 @@ public:
 	// return the most frequently appearing name in the text file
 	string mostPopularName() 
 	{
-		int nameCount = 0;
+		int Count = 0;
 		int previous = 0;
 		string totalofName;
 
@@ -61,14 +59,14 @@ public:
 			{
 				if (saveData[i].getName() == saveData[j].getName())
 				{
-					nameCount++;
+					Count++;
 				}
 			}
-			if (nameCount > previous)
+			if (Count > previous)
 			{
 				totalofName = saveData[i].getName();
-				previous = nameCount;
-				nameCount = 0;
+				previous = Count;
+				Count = 0;
 			}
 		}
 		return totalofName;
@@ -115,10 +113,10 @@ private:
 	void addEntry(Baby b) 
 	{
 		saveData[NumofB] = b;
-		NumofB++;
+		NumofB++;	//break error here
 	}
 
 	Baby* saveData;
-	int NumofB;
-	int totalBirths;
+	int NumofB = 0;
+	int totalBirths = 1000;
 };
