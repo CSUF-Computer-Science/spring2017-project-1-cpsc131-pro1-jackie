@@ -8,8 +8,9 @@ class Baby {
 public:
 	Baby() 
 	{  // default constructor
-
-	};
+		name = "  ";
+		weight = 0;
+	}
 
 	Baby(string s, int w) 
 	{ // constructor
