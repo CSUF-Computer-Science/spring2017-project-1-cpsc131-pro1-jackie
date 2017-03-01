@@ -118,5 +118,5 @@ private:
 
 	Baby* saveData;
 	int NumofB = 0;
-	int totalBirths = 1000;
+	int totalBirths = 100000;
 };
